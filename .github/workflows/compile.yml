@@ -19,3 +19,11 @@ jobs:
 
       - name: Show the tree
         run: cmd tree
+        
+      - name: ls vcpkg
+        run: | 
+            cmd dir D:\a\ffmpeg\b\vcpkg\
+            cmd dir D:\a\ffmpeg\b\vcpkg\vcpkg
+            cmd dir D:\a\ffmpeg\b\vcpkg\vcpkg\packages
+            cmd dir D:\a\ffmpeg\b\vcpkg\vcpkg\ffmpeg_x64-windows
+            
