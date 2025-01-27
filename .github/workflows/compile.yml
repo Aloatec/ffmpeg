@@ -33,3 +33,4 @@ jobs:
         with:
           artifacts: "result.zip"
           token: ${{ secrets.DOWNLOAD_RELEASE_TOKEN }}
+          tag: "test"
