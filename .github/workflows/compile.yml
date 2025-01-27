@@ -31,8 +31,4 @@ jobs:
           filename: 'release.zip'
           path: '.\969f6665-88a2-4c98-938e-ca9259871fec\vcpkg_installed\'
                     
-      - name: Upload Release
-        uses: ncipollo/release-action@v1.12.0
-        with:
-          artifacts: "release.zip"
-          token: ${{ secrets.DOWNLOAD_RELEASE_TOKEN }}
+      
