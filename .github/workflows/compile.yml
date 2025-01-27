@@ -22,13 +22,8 @@ jobs:
           
       - name: Affichage path current
         run: dir D:\a\ffmpeg\ffmpeg\969f6665-88a2-4c98-938e-ca9259871fec\vcpkg_installed
-          
-      - uses: actions/checkout@master
-      - name: Archive Release
-        uses: thedoctor0/zip-release@0.7.5
+
+      - uses: vimtor/action-zip@v1.2
         with:
-          type: 'zip'
-          filename: 'release.zip'
-          path: 'D:\a\ffmpeg\ffmpeg\969f6665-88a2-4c98-938e-ca9259871fec\vcpkg_installed\'
-                    
-      
+          files: D:\a\ffmpeg\ffmpeg\969f6665-88a2-4c98-938e-ca9259871fec\vcpkg_installed
+          dest: result.zip
