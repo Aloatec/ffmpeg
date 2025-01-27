@@ -1,0 +1,20 @@
+{
+  "dependencies": [
+    {
+      "name": "ffmpeg",
+      "default-features": false,
+	  "features": [
+        "avcodec",
+        "avformat",
+        "swscale",
+		"x264"
+	  ]
+    }
+  ],
+  "overrides": [
+    {
+      "name": "ffmpeg",
+      "version": "6.1.1"
+    }
+  ]
+}
