@@ -27,3 +27,16 @@ jobs:
             dir D:\a\ffmpeg\b\vcpkg\vcpkg\packages
             dir D:\a\ffmpeg\b\vcpkg\vcpkg\ffmpeg_x64-windows
             
+      - uses: actions/checkout@master
+      - name: Archive Release
+        uses: thedoctor0/zip-release@0.7.5
+        with:
+          type: 'zip'
+          filename: 'release.zip'
+          path: 'vcpkg_installed\x64-windows\
+          
+      - name: Upload Release
+        uses: ncipollo/release-action@v1.12.0
+        with:
+          artifacts: "release.zip"
+          token: ${{ secrets.DOWNLOAD_RELEASE_TOKEN }}
