@@ -19,7 +19,10 @@ jobs:
 
       - name: Show the tree
         run: tree
-            
+          
+      - name: Affichage path current
+        run: dir
+          
       - uses: actions/checkout@master
       - name: Archive Release
         uses: thedoctor0/zip-release@0.7.5
@@ -27,10 +30,7 @@ jobs:
           type: 'zip'
           filename: 'release.zip'
           path: '969f6665-88a2-4c98-938e-ca9259871fec\vcpkg_installed\x64-windows'
-          
-      - name: Affichage path current
-        run: dir
-          
+                    
       - name: Upload Release
         uses: ncipollo/release-action@v1.12.0
         with:
