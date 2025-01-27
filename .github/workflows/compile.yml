@@ -18,12 +18,12 @@ jobs:
           vcpkgDirectory: '${{ runner.workspace }}/b/vcpkg'
 
       - name: Show the tree
-        run: cmd tree
+        run: tree
         
       - name: ls vcpkg
         run: | 
-            cmd dir D:\a\ffmpeg\b\vcpkg\
-            cmd dir D:\a\ffmpeg\b\vcpkg\vcpkg
-            cmd dir D:\a\ffmpeg\b\vcpkg\vcpkg\packages
-            cmd dir D:\a\ffmpeg\b\vcpkg\vcpkg\ffmpeg_x64-windows
+            dir D:\a\ffmpeg\b\vcpkg\
+            dir D:\a\ffmpeg\b\vcpkg\vcpkg
+            dir D:\a\ffmpeg\b\vcpkg\vcpkg\packages
+            dir D:\a\ffmpeg\b\vcpkg\vcpkg\ffmpeg_x64-windows
             
