@@ -17,16 +17,10 @@ jobs:
           vcpkgJsonGlob: vcpkg.json
           vcpkgDirectory: '${{ runner.workspace }}/b/vcpkg'
 
-      - name: Show the tree
-        run: tree
-          
-      - name: Affichage path current
-        run: dir D:\a\ffmpeg\ffmpeg\969f6665-88a2-4c98-938e-ca9259871fec\vcpkg_installed
-
       - uses: vimtor/action-zip@v1.2
         with:
           files: ./969f6665-88a2-4c98-938e-ca9259871fec/vcpkg_installed/
-          dest: result.zip
+          dest: ffmpeg.zip
           recursive: true
           
       - name: Upload Release
