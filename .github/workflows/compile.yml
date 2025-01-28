@@ -37,5 +37,5 @@ jobs:
         with:
           artifacts: "ffmpeg-{{ matrix.version }}-{{ matrix.platform}}.zip"
           token: ${{ secrets.DOWNLOAD_RELEASE_TOKEN }}
-          tag: "${{ matrix.version }} {{ matrix.platform}} BUILD"
+          tag: "${{ matrix.version }}.{{ matrix.platform}}.BUILD"
         
