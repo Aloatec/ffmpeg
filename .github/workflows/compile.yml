@@ -10,7 +10,7 @@ jobs:
     strategy:
       matrix:
         os: [windows-2022]
-        platform: [x86, x64]
+        platform: [x86-windows, x64-windows]
         version: [6.1.1 Build]
         
     env:
