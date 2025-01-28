@@ -29,7 +29,7 @@ jobs:
       - uses: vimtor/action-zip@v1.2
         with:
           files: ./969f6665-88a2-4c98-938e-ca9259871fec/vcpkg_installed/
-          dest: ffmpeg.zip
+          dest: ffmpeg-{{ matrix.version }}-{{ matrix.platform}}.zip
           recursive: true
           
       - name: Upload Release
