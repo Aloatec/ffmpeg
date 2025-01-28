@@ -11,7 +11,7 @@ jobs:
       matrix:
         os: [windows-2022]
         platform: [x86-windows, x64-windows]
-        version: [6.1.1 Build]
+        version: [6.1.1-Build]
         
     env:
         VCPKG_DEFAULT_TRIPLET: ${{ matrix.platform }}
@@ -29,13 +29,13 @@ jobs:
       - uses: vimtor/action-zip@v1.2
         with:
           files: ./969f6665-88a2-4c98-938e-ca9259871fec/vcpkg_installed/
-          dest: ffmpeg-{{ matrix.version }}-{{ matrix.platform}}.zip
+          dest: ffmpeg-${{ matrix.version }}-${{ matrix.platform}}.zip
           recursive: true
           
       - name: Upload Release
         uses: ncipollo/release-action@v1.12.0
         with:
-          artifacts: "ffmpeg-{{ matrix.version }}-{{ matrix.platform}}.zip"
+          artifacts: "ffmpeg-${{ matrix.version }}-${{ matrix.platform}}.zip"
           token: ${{ secrets.DOWNLOAD_RELEASE_TOKEN }}
-          tag: "6.1.1-BUILD"
+          tag: "${{ matrix.version }}.${{ matrix.platform }}"
         
