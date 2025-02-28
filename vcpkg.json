@@ -7,7 +7,8 @@
         "avcodec",
         "avformat",
         "swscale",
-		"x264"
+        "swresample",
+        "x264"
 	  ]
     }
   ],
