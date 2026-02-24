@@ -8,7 +8,6 @@
         "avformat",
         "swscale",
         "swresample",
-        "x264",
 		"x265"
 	  ]
     }
